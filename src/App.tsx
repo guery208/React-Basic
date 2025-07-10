@@ -8,11 +8,11 @@ function App() {
   const [name, setName] = useState<string>("스마이퍼팩토리");
   const [nickname, setNickname] = useState<string>("");
 
-  const onChaangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
 
-  const onChaangeNickName = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeNickName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNickname(e.target.value);
   };
 
@@ -30,12 +30,8 @@ function App() {
       <button onClick={() => setValue(value - 1)}>1감소</button>
 
       <div>
-        <input type="type" value={name} onChange={onChaangeName}></input>
-        <input
-          type="type"
-          value={nickname}
-          onChange={onChaangeNickName}
-        ></input>
+        <input type="type" value={name} onChange={onChangeName}></input>
+        <input type="type" value={nickname} onChange={onChangeNickName}></input>
       </div>
 
       <div>
